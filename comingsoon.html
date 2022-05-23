@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon || ManuelsRides - Logistics Company</title>
+
+    <!--==================FAVICON==================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==========================CSS==================================== -->
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 16px;
+        }
+        header {
+            position: absolute;
+            height: auto;
+            width: 100%;
+            padding: 30px;
+        }
+        header img {
+            width: 150px;
+        }
+        .container {
+            padding-top: 100px;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+            padding-bottom: 50px;
+        }
+        .container .left {
+            width: 100%;
+            padding: 50px 30px 0 30px;
+        }
+        .container .right {
+            width: 100%;
+            height: 300px;
+            background-image: url(/img/hero-desktop.jpeg);
+            background-size: cover;
+        }
+        .container .right img {
+            width: 100%;
+            height: 100%;
+        }
+        .container .left h1 {
+            letter-spacing: .5rem;
+            text-align: center;
+            font-size: 3.2rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            color: hsl(0, 36%, 70%);
+            line-height: 3.5rem;
+        }
+        .container .left h1 span {
+            color: hsl(0, 6%, 24%);
+            font-weight: 700;
+        }
+        .container .left p {
+            max-width: 450px;
+            text-align: center;
+            color: hsl(0, 36%, 70%);
+            font-size: .9rem;
+            line-height: 1.5rem;
+            margin: 20px auto 40px auto;
+        }
+        .container form {
+            position: relative;
+            display: block;
+            height: 50px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .container form input {
+            position: absolute;
+            width: 100%;
+            outline: none;
+            border: 1px solid hsl(0, 36%, 70%);
+            height: 100%;
+            border-radius: 50px;
+            padding-left: 30px;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.1rem;
+        }
+        .container form label {
+            visibility: hidden;
+            position: absolute;
+        }
+        .container form button {
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            border: none;
+            outline: none;
+            color: white;
+            width: 70px;
+            height: 100%;
+            border-radius: 50px;
+            background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+            box-shadow: 0px 0px 18px 1px #f4aaab82;
+            transition: .3s ease box-shadow;
+        }
+        .container form button:hover {
+            background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsla(0, 52%, 80%, 0.781));
+            box-shadow: 0px 0px 13px 2px #f4aaabbf;
+        }
+        .container form input::placeholder {
+            color: hsl(0, 36%, 70%);
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.1rem;
+            opacity: .8;
+        }
+        .container form .error-icon {
+            display: inline-block;
+            position: absolute;
+            right: 85px;
+            top: 24%;
+            display: none;
+        }
+        .container form .error-text {
+            position: absolute;
+            left: 30px;
+            top: 40px;
+            font-size: 1rem;
+            display: none;
+        }
+        .container form.error .error-icon,
+        .container form.error .error-text {
+            display: block;
+        }
+        .container form.error input {
+            border: 2px solid hsl(0, 93%, 68%);
+        }
+
+        footer {
+            padding: 10px 0;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: .8rem;
+            line-height: 1.2rem;
+        }
+        footer a {
+            color: aqua;
+            text-decoration: none;
+        }
+
+        @media only screen and (min-width: 768px) {
+            header {
+                padding-left: 10%;
+            }
+            .container {
+                padding-top: 0;
+                flex-direction: row;
+                padding-bottom: 0;
+            }
+            .container .right {
+                width: 80%;
+                height: 100vh;
+                background-image: url(/img/hero-desktop.jpeg);
+            }
+            .container .left {
+                padding-top: 28vh;
+                width: 100%;
+                height: 100vh;
+                padding-left: 10%;
+                background-image: url(/img/bg-pattern-desktop.svg);
+                background-size: cover;
+                background-position: center;
+            }
+            .container .left h1 {
+                text-align: left;
+                font-size: 5rem;
+                line-height: 5.5rem;
+            }
+            .container .left p {
+                margin-left: 0;
+                text-align: left;
+                font-size: 1.1rem;
+            }
+            .container form {
+                margin-left: 0;
+            }
+            .container form button {
+                width: 80px;
+            }
+        }
+  </style>
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <!-- <header><div class="logo"><img src="/img/manuelriders.png" alt="manuelsrides"></div></header> -->
+  <header><a href="/" class="nav__logo"><img src="/img/manuelriders.png" alt="" srcset="" style="width: 80px;padding: 12px;"></a></header>
+  <section class="container">
+    <div class="left">
+      <h1>We're <br><span>coming <br>soon</span></h1>
+      <p>Hello Esteemed Customers! We're currently building our new app, when its available in the store, we'll inform you. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <form action="#">
+        <label for="Email">Email Address</label>
+          <input name='Email' id="Email" value="" type="email" placeholder="Email Address" required>
+          <img src="./img/icon-error.svg" class="error-icon" alt="">
+          <button type="submit"><img src="./img/icon-arrow.svg" alt="arrow"></button>
+          <p class="error-text">Please provide a valid email</p>
+      </form>
+    </div>
+    <div class="right"></div>
+  </section>
+  
+  <footer>
+    <p class="attribution">
+      Return to <a href="/">Homepage</a>
+    </p>
+  </footer>
+  <script>
+      const form = document.querySelector('.container form');
+        const email = document.querySelector('.container form input[type=email]');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let emailValue = email.value;
+            console.log(email.value);
+            if (validateEmail(emailValue)) {
+                form.classList.remove('error');
+            } else {
+                form.classList.add('error');
+            }
+        });
+        function validateEmail (email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+  </script>
+</body>
+</html>
